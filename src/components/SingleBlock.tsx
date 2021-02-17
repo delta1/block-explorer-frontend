@@ -21,18 +21,18 @@ interface Status {
     message: string;
 }
 
-function BlockType(param) {
-    switch(param) {
+function blockType(param) {
+    switch (param) {
         case '0':
-          return "Monero"
+            return 'Monero';
         case '1':
-          return "Blake"
+            return 'Blake';
         case '2':
-          return "Sha3"
+            return 'Sha3';
         default:
-          return "Undefined"
-      }
-  }
+            return 'Undefined';
+    }
+}
 
 function SingleBlock({ constants }: Props) {
     const { id } = useParams();
@@ -132,7 +132,7 @@ function SingleBlock({ constants }: Props) {
                     <StatRow label="Timestamp" value={date} />
                     <h1>Technical Details</h1>
                     <StatRow label="Block Height" value={height} />
-                    <StatRow label="Block Algorithm" value={BlockType(pow_algo)} />
+                    <StatRow label="Block Algorithm" value={blockType(pow_algo)} />
                     <Link to={`/block/${prev_hash}`}>
                         <StatRow label="Previous Hash" value={prev_hash} />
                     </Link>

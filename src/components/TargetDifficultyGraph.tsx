@@ -8,9 +8,9 @@ interface Props {
 
 function TargetDifficultyGraph({ difficulties }: Props) {
     const difficultyArray: any[] = [];
-    difficulties.forEach( function(item) {
-        const { difficulty, height, pow_algo } = item;
-        difficultyArray.push({ y: difficulty, x: +height, group: pow_algo});
+    difficulties.forEach(function (item) {
+        const { difficulty, height, powAlgo } = item;
+        difficultyArray.push({ y: difficulty, x: +height, group: powAlgo });
     });
     console.log(difficultyArray);
     const yAxisLabel = 'target difficulty';
