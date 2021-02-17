@@ -5,7 +5,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: yarn
-      run: yarn
-    - name: eslint
-      run: yarn lint
+    - uses: bradennapier/eslint-plus-action@v3.4.2
+
+# on: [push, pull_request]
+# jobs:
+#   eslint:
+#     runs-on: ubuntu-latest
+#     steps:
+#     - uses: actions/checkout@v2
+#     - name: yarn
+#       run: yarn
+#     - name: eslint
+#       run: yarn lint
